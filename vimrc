@@ -1,46 +1,49 @@
-" Save 1,000 items in history
+" General
+filetype plugin indent on
+set nocompatible
+set hidden
+syntax enable
+set lbr
 set history=1000
-
-" Show the line and column number of the cursor position
 set ruler
-
-" Display the incomplete commands in the bottom right-hand side of your screen.
 set showcmd
-
-" Display completion matches on your status line
 set wildmenu
-
-" Show a few lines of context around the cursor
 set scrolloff=5
 
-" Highlight search matches
-set hlsearch
+" Splits
+set splitbelow
+set splitright
 
-" Enable incremental searching
-set incsearch
+" Encoding
+scriptencoding utf-8
+set encoding=utf-8
 
-" Override the 'ignorecase' option if the search pattern contains upper case characters.
-set smartcase
-
-" Turn on line numbering
-set number
-
-" Don't line wrap mid-word.
-set lbr
-
-" Copy the indentation from the current line.
+" Indent
+set smartindent
+set copyindent
 set autoindent
 
-" Enable smart autoindenting.
-set smartindent
-
-" Use spaces instead of tabs
-set expandtab
-
-" Enable smart tabs
+" Tabs
 set smarttab
-
-" Make a tab equal to 4 spaces
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+
+" Searching
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+call plug#begin('~/.vim/bundle')
+" List installed plugins
+
+" https://github.com/patstockwell/vim-monokai-tasty
+Plug 'patstockwell/vim-monokai-tasty'
+
+call plug#end()
+
+let g:vim_monokai_tasty_italic = 1
+colorscheme vim-monokai-tasty
 
