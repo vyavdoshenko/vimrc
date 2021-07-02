@@ -14,3 +14,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\<br/>
 
 ## Inside vim
 :PlugInstall
+
+## Optional. Install patched fonts and devicons.
+- https://github.com/ryanoasis/nerd-fonts
+- https://github.com/ryanoasis/vim-devicons
