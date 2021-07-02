@@ -1,7 +1,7 @@
 # vimrc configuration file
 
 ## Before using
-Please install curl. It's needed for plugin manager.
+Please install curl. It's needed to install vim-plug.
 
 ## Install 
 $ git clone https://github.com/vyavdoshenko/vimrc ~/.vim
