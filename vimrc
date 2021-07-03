@@ -33,7 +33,6 @@ set softtabstop=4
 " Searching
 set ignorecase
 set smartcase
-set hlsearch
 set incsearch
 
 call plug#begin('~/.vim/plugged')
