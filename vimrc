@@ -62,6 +62,8 @@ nnoremap <leader><DOWN> <C-w>+
 nnoremap <leader>b :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>l :lopen<CR><C-w>k
 nnoremap <leader>q :lclose<CR>
+nmap <leader>fw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>fd <Plug>(YCMFindSymbolInDocument)
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
