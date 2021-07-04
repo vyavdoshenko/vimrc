@@ -56,6 +56,8 @@ set noshowmode
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>l <C-w><
 nnoremap <leader>h <C-w>>
+nnoremap <leader><RIGHT> <C-w><
+nnoremap <leader><LEFT> <C-w>>
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
