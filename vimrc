@@ -42,6 +42,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'valloric/youcompleteme'
 call plug#end()
 
 let g:vim_monokai_tasty_italic = 1
