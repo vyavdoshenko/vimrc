@@ -1,7 +1,7 @@
 # vimrc configuration file
 
 ## Before using
-Please install curl. It's needed to install vim-plug.
+Please install curl. Curl needed to install vim-plug.
 
 ## Install 
 $ git clone https://github.com/vyavdoshenko/vimrc ~/.vim
@@ -18,3 +18,6 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\<br/>
 ## Optional. Install patched fonts and devicons.
 - https://github.com/ryanoasis/nerd-fonts
 - https://github.com/ryanoasis/vim-devicons
+
+## To install completion engines. Please follow the instructions in the install section.
+- https://vimawesome.com/plugin/youcompleteme
