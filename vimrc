@@ -55,11 +55,13 @@ endif
 set noshowmode
 
 nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>l <C-w><
-nnoremap <leader>h <C-w>>
 nnoremap <leader><RIGHT> <C-w><
 nnoremap <leader><LEFT> <C-w>>
+nnoremap <leader><UP> <C-w>-
+nnoremap <leader><DOWN> <C-w>+
 nnoremap <leader>b :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>l :lopen<CR><C-w>k
+nnoremap <leader>q :lclose<CR>
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -68,3 +70,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 
+let g:ycm_always_populate_location_list = 1
