@@ -1,6 +1,6 @@
 " General
 filetype plugin indent on
-set nocompatible
+set nocompatible             " Make vim configuration no compatible to classical vi
 set hidden
 syntax enable
 set lbr
@@ -45,6 +45,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Colorsheme settings
