@@ -9,10 +9,11 @@ set ruler
 set showcmd
 set wildmenu
 set scrolloff=5
+set mouse=a                  " Enable mouse drag on window splits
 
 " Splits
-set splitbelow
-set splitright
+set splitbelow               " Always split below
+set splitright               " Always split right
 
 " Encoding
 scriptencoding utf-8
@@ -25,16 +26,17 @@ set autoindent
 
 " Tabs
 set smarttab
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=4                " How many columns of whitespace a \t is worth
+set shiftwidth=4             " How many columns of whitespace a 'level of indentation' is worth
+set expandtab                " Use spaces when tabbing
 set softtabstop=4
 
 " Searching
 set ignorecase
 set smartcase
-set incsearch
+set incsearch                " Enable incremental search
 
+" Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'itchyny/lightline.vim'
@@ -45,6 +47,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
 call plug#end()
 
+" Colorsheme settings
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
@@ -54,6 +57,7 @@ if !has('gui_running')
 endif
 set noshowmode
 
+" Key mappings
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader><RIGHT> <C-w><
 nnoremap <leader><LEFT> <C-w>>
