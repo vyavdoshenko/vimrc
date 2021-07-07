@@ -1,10 +1,9 @@
 " General
 filetype plugin indent on
 set nocompatible             " Make vim configuration no compatible to classical vi
-set hidden
-syntax enable
-set lbr
-set history=1000
+set hidden                   " Enable switching buffers when changes are not saved
+syntax enable                " Enables colors for different syntax
+set history=1000             " Enlarge history list
 set ruler
 set showcmd
 set wildmenu
@@ -52,6 +51,7 @@ call plug#end()
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
+" Status line settings
 set laststatus=2
 if !has('gui_running')
   set t_Co=256
@@ -77,4 +77,5 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 
+" Populating list of issues. Useful for :lopen (:lclose)
 let g:ycm_always_populate_location_list = 1
