@@ -1,41 +1,54 @@
+" --------------------------------------------------
 " General
-filetype plugin indent on
+" --------------------------------------------------
+filetype plugin indent on    " Enable loading the indent file for specific file types
 set nocompatible             " Make vim configuration no compatible to classical vi
 set hidden                   " Enable switching buffers when changes are not saved
-syntax enable                " Enables colors for different syntax
+syntax enable                " Enable colors for different syntax
 set history=1000             " Enlarge history list
-set ruler
-set showcmd
-set wildmenu
-set scrolloff=5
+set wildmenu                 " Convinient menubar above statusbar
+set scrolloff=5              " Minimal number of screen lines to keep above and below the cursor.
 set mouse=a                  " Enable mouse drag on window splits
+set number                   " Precede each line with its line number.
 
+" --------------------------------------------------
 " Splits
+" --------------------------------------------------
 set splitbelow               " Always split below
 set splitright               " Always split right
 
+" --------------------------------------------------
 " Encoding
+" --------------------------------------------------
 scriptencoding utf-8
 set encoding=utf-8
 
+" --------------------------------------------------
 " Indent
+" --------------------------------------------------
 set smartindent
 set copyindent
 set autoindent
 
+" --------------------------------------------------
 " Tabs
+" --------------------------------------------------
 set smarttab
 set tabstop=4                " How many columns of whitespace a \t is worth
 set shiftwidth=4             " How many columns of whitespace a 'level of indentation' is worth
 set expandtab                " Use spaces when tabbing
-set softtabstop=4
+set softtabstop=4            " Number of spaces that a <Tab> counts for while performing editing operations
 
+" --------------------------------------------------
 " Searching
-set ignorecase
-set smartcase
+" --------------------------------------------------
+set ignorecase               " Ignoring case in a pattern
+set smartcase                " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set incsearch                " Enable incremental search
 
+" --------------------------------------------------
 " Plugins
+" --------------------------------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'itchyny/lightline.vim'
@@ -48,25 +61,36 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/tagbar'
 call plug#end()
 
+
+" --------------------------------------------------
 " Colorsheme settings
+" --------------------------------------------------
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
+
+" --------------------------------------------------
 " Status line settings
+" --------------------------------------------------
 set laststatus=2
 if !has('gui_running')
   set t_Co=256
 endif
 set noshowmode
 
+
+" --------------------------------------------------
 " Moving windows key mappings
+" --------------------------------------------------
 nnoremap <leader><RIGHT> <C-w><
 nnoremap <leader><LEFT> <C-w>>
 nnoremap <leader><UP> <C-w>-
 nnoremap <leader><DOWN> <C-w>+
 
 
-" ----- YCM plugin settings-----
+" --------------------------------------------------
+" YCM plugin settings
+" --------------------------------------------------
 nnoremap <leader>b :YcmForceCompileAndDiagnostics<CR>
 " Find in workspace key mapping
 nnoremap <leader>fw <Plug>(YCMFindSymbolInWorkspace)
@@ -78,19 +102,20 @@ nnoremap <leader>l :lopen<CR><C-w>k
 nnoremap <leader>q :lclose<CR>
 
 
-" ----- NERDTree plugin settings -----
+" --------------------------------------------------
+" NERDTree plugin settings
+" --------------------------------------------------
 let NERDTreeShowHidden = 1      " Show hidden files
 let NERDTreeWinSize = 25        " Set panel width to 31 columns
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-" NERDTree toggle keys mapping
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 
-" ----- tagbar plugin setting -----
+" --------------------------------------------------
+" tagbar plugin settings
+" --------------------------------------------------
 " Focus the panel when opening it
 let g:tagbar_autofocus = 1
 " Highlight the active tag
