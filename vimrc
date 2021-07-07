@@ -7,9 +7,10 @@ set hidden                   " Enable switching buffers when changes are not sav
 syntax enable                " Enable colors for different syntax
 set history=1000             " Enlarge history list
 set wildmenu                 " Convinient menubar above statusbar
-set scrolloff=5              " Minimal number of screen lines to keep above and below the cursor.
+set scrolloff=5              " Minimal number of screen lines to keep above and below the cursor
 set mouse=a                  " Enable mouse drag on window splits
-set number                   " Precede each line with its line number.
+set number                   " Precede each line with its line number
+
 
 " --------------------------------------------------
 " Splits
@@ -17,18 +18,21 @@ set number                   " Precede each line with its line number.
 set splitbelow               " Always split below
 set splitright               " Always split right
 
+
 " --------------------------------------------------
 " Encoding
 " --------------------------------------------------
 scriptencoding utf-8
 set encoding=utf-8
 
+
 " --------------------------------------------------
 " Indent
 " --------------------------------------------------
-set smartindent
-set copyindent
-set autoindent
+set smartindent               " Do smart autoindenting when starting a new line
+set copyindent                " Copy the structure of the existing lines indent when autoindenting a new line
+set autoindent                " Copy indent from current line when starting a new line
+
 
 " --------------------------------------------------
 " Tabs
@@ -39,12 +43,14 @@ set shiftwidth=4             " How many columns of whitespace a 'level of indent
 set expandtab                " Use spaces when tabbing
 set softtabstop=4            " Number of spaces that a <Tab> counts for while performing editing operations
 
+
 " --------------------------------------------------
 " Searching
 " --------------------------------------------------
 set ignorecase               " Ignoring case in a pattern
-set smartcase                " Override the 'ignorecase' option if the search pattern contains upper case characters.
+set smartcase                " Override the 'ignorecase' option if the search pattern contains upper case characters
 set incsearch                " Enable incremental search
+
 
 " --------------------------------------------------
 " Plugins
@@ -106,7 +112,7 @@ nnoremap <leader>q :lclose<CR>
 " NERDTree plugin settings
 " --------------------------------------------------
 let NERDTreeShowHidden = 1      " Show hidden files
-let NERDTreeWinSize = 25        " Set panel width to 31 columns
+let NERDTreeWinSize = 25        " Set panel width
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
