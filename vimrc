@@ -45,6 +45,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
 Plug 'sheerun/vim-polyglot'
+Plug 'preservim/tagbar'
 call plug#end()
 
 " Colorsheme settings
@@ -58,24 +59,43 @@ if !has('gui_running')
 endif
 set noshowmode
 
-" Key mappings
-nnoremap <leader>t :NERDTreeToggle<CR>
+" Moving windows key mappings
 nnoremap <leader><RIGHT> <C-w><
 nnoremap <leader><LEFT> <C-w>>
 nnoremap <leader><UP> <C-w>-
 nnoremap <leader><DOWN> <C-w>+
+
+
+" ----- YCM plugin settings-----
 nnoremap <leader>b :YcmForceCompileAndDiagnostics<CR>
+" Find in workspace key mapping
+nnoremap <leader>fw <Plug>(YCMFindSymbolInWorkspace)
+" Find in current document key mapping
+nnoremap <leader>fd <Plug>(YCMFindSymbolInDocument)
+" Populating list of issues. Useful for :lopen (:lclose)
+let g:ycm_always_populate_location_list = 1
 nnoremap <leader>l :lopen<CR><C-w>k
 nnoremap <leader>q :lclose<CR>
-nmap <leader>fw <Plug>(YCMFindSymbolInWorkspace)
-nmap <leader>fd <Plug>(YCMFindSymbolInDocument)
 
+
+" ----- NERDTree plugin settings -----
+let NERDTreeShowHidden = 1      " Show hidden files
+let NERDTreeWinSize = 25        " Set panel width to 31 columns
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
-
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
+" NERDTree toggle keys mapping
+nnoremap <leader>n :NERDTreeToggle<CR>
 
-" Populating list of issues. Useful for :lopen (:lclose)
-let g:ycm_always_populate_location_list = 1
+
+" ----- tagbar plugin setting -----
+" Focus the panel when opening it
+let g:tagbar_autofocus = 1
+" Highlight the active tag
+let g:tagbar_autoshowtag = 1
+" Make panel vertical and place on the right
+let g:tagbar_position = 'botright vertical'
+" Mapping to open and close the panel
+nnoremap <leader>t :TagbarToggle<CR>
