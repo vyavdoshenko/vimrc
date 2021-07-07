@@ -66,6 +66,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'matze/vim-move'
+Plug 'derekwyatt/vim-fswitch'
 call plug#end()
 
 
@@ -145,3 +146,10 @@ execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
 execute "set <A-l>=\el"
 execute "set <A-h>=\eh"
+
+
+" --------------------------------------------------
+" Mapping to make vim-fswitch plugin make working
+" --------------------------------------------------
+nnoremap <leader>h :FSRight<CR>
+nnoremap <leader>c :FSRight<CR>
