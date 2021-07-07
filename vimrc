@@ -65,6 +65,7 @@ Plug 'valloric/youcompleteme'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
+Plug 'matze/vim-move'
 call plug#end()
 
 
@@ -136,3 +137,17 @@ nnoremap <leader>t :TagbarToggle<CR>
 " AutoPairs plugin settings
 " --------------------------------------------------
 let g:AutoPairsShortcutToggle = '<leader>p'
+
+" --------------------------------------------------
+" mapping to make vim-move plugin make working under macos
+" --------------------------------------------------
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    execute "set <A-j>=\ej"
+    execute "set <A-k>=\ek"
+    execute "set <A-l>=\el"
+    execute "set <A-h>=\eh"
+  endif
+endif
+
