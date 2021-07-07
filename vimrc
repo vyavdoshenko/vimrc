@@ -139,7 +139,7 @@ nnoremap <leader>t :TagbarToggle<CR>
 let g:AutoPairsShortcutToggle = '<leader>p'
 
 " --------------------------------------------------
-" mapping to make vim-move plugin make working under macos
+" Mapping to make vim-move plugin make working under macOS
 " --------------------------------------------------
 if has("unix")
   let s:uname = system("uname")
