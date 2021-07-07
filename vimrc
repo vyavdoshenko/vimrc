@@ -2,12 +2,12 @@
 " General
 " --------------------------------------------------
 filetype plugin indent on    " Enable loading the indent file for specific file types
-set nocompatible             " Make vim configuration no compatible to classical vi
+set nocompatible             " Make vim configuration no compatible with classical vi
 set hidden                   " Enable switching buffers when changes are not saved
-syntax enable                " Enable colors for different syntax
+syntax enable                " Enable colors for different syntaxes
 set history=1000             " Enlarge history list
 set wildmenu                 " Convinient menubar above statusbar
-set scrolloff=5              " Minimal number of screen lines to keep above and below the cursor
+set scrolloff=5              " A minimal number of screen lines to keep above and below the cursor
 set mouse=a                  " Enable mouse drag on window splits
 set number                   " Precede each line with its line number
 
@@ -29,16 +29,16 @@ set encoding=utf-8
 " --------------------------------------------------
 " Indent
 " --------------------------------------------------
-set smartindent               " Do smart autoindenting when starting a new line
+set smartindent               " Do smart auto indenting when starting a new line
 set copyindent                " Copy the structure of the existing lines indent when autoindenting a new line
-set autoindent                " Copy indent from current line when starting a new line
+set autoindent                " Copy indent from the current line when starting a new line
 
 
 " --------------------------------------------------
 " Tabs
 " --------------------------------------------------
 set smarttab
-set tabstop=4                " How many columns of whitespace a \t is worth
+set tabstop=4                " How many columns of whitespace a <Tab> is worth
 set shiftwidth=4             " How many columns of whitespace a 'level of indentation' is worth
 set expandtab                " Use spaces when tabbing
 set softtabstop=4            " Number of spaces that a <Tab> counts for while performing editing operations
