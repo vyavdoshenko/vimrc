@@ -65,6 +65,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/tagbar'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 
@@ -130,3 +131,9 @@ let g:tagbar_autoshowtag = 1
 let g:tagbar_position = 'botright vertical'
 " Mapping to open and close the panel
 nnoremap <leader>t :TagbarToggle<CR>
+
+
+" --------------------------------------------------
+" AutoPairs plugin settings
+" --------------------------------------------------
+let g:AutoPairsShortcutToggle = '<leader>p'
