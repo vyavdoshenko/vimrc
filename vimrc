@@ -139,6 +139,7 @@ nnoremap <leader>t :TagbarToggle<CR>
 " --------------------------------------------------
 let g:AutoPairsShortcutToggle = '<leader>p'
 
+
 " --------------------------------------------------
 " Mapping to make vim-move plugin make working
 " --------------------------------------------------
