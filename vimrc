@@ -67,6 +67,7 @@ Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'matze/vim-move'
 Plug 'derekwyatt/vim-fswitch'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 
