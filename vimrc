@@ -68,6 +68,7 @@ Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'dyng/ctrlsf.vim'
 call plug#end()
 
 
