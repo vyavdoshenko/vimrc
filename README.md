@@ -3,10 +3,14 @@
 ## Before using
 Please install curl. Curl needed to install vim-plug.
 
-## Install 
+## Install
 $ git clone https://github.com/vyavdoshenko/vimrc ~/.vim
 
-## Install vim-plug 
+For nvim only:
+$ mkdir ~/.config/nvim/
+$ ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
+
+## Install vim-plug
 https://github.com/junegunn/vim-plug
 
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\<br/>
