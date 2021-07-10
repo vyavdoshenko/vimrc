@@ -80,7 +80,7 @@ colorscheme vim-monokai-tasty
 
 
 " --------------------------------------------------
-" Status line settings
+" lightline plugin settings
 " --------------------------------------------------
 set laststatus=2
 if !has('gui_running')
@@ -145,7 +145,7 @@ nnoremap <leader>t :TagbarToggle<CR>
 
 
 " --------------------------------------------------
-" AutoPairs plugin settings
+" auto-pairs plugin settings
 " --------------------------------------------------
 let g:AutoPairsShortcutToggle = '<leader>p'
 
