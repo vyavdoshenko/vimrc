@@ -59,7 +59,6 @@ set rtp +=~/.vim
 call plug#begin('~/.vim/plugged')
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'itchyny/lightline.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
@@ -69,6 +68,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dyng/ctrlsf.vim'
+" Always load the vim-devicons as the very last one.
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
