@@ -90,6 +90,14 @@ set noshowmode
 
 
 " --------------------------------------------------
+" lightline & vim_monokai_tasty integration
+" --------------------------------------------------
+let g:lightline = {
+      \ 'colorscheme': 'monokai_tasty',
+      \ }
+
+
+" --------------------------------------------------
 " Moving windows key mappings
 " --------------------------------------------------
 nnoremap <leader><RIGHT> <C-w><
