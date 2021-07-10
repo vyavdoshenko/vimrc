@@ -156,3 +156,22 @@ let g:AutoPairsShortcutToggle = '<leader>p'
 " --------------------------------------------------
 nnoremap <leader>h :FSRight<CR>
 nnoremap <leader>c :FSRight<CR>
+
+" **************************************************
+" Known default mappings with Ctrl key
+" **************************************************
+" C-v      Enter visual mode for selection of BLOCKS
+" C-r      Redo
+" C-z      send vim to background (fg brings it to front again)
+" C-ws     Split current window horizontally (alternative :split)
+" C-wv     Split current window vertically (alternative :vsplit)
+" C-ww     Jump to the next window
+" C-wARROW Jump to window left/right/top/bottom (arrow keys) to the current
+" C-w#<    Shrink/resize current window from the right by # (default 1)
+" C-w#>    Increase/resize current window to the right by # (default 1)
+" C-b      Move back one full screen (page up)
+" C-f      Move forward one full screen (page down)
+" C-d      Move forward 1/2 screen; half page down
+" C-u      Move back (up) 1/2 screen; half page up
+" C-n      Keyword completion
+
