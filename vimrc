@@ -129,7 +129,6 @@ let NERDTreeWinSize = 25        " Set panel width
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
-nnoremap <leader>n :NERDTreeToggle<CR>
 
 
 " --------------------------------------------------
@@ -139,10 +138,6 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let g:tagbar_autofocus = 1
 " Highlight the active tag
 let g:tagbar_autoshowtag = 1
-" Make panel vertical and place on the right
-let g:tagbar_position = 'botright vertical'
-" Mapping to open and close the panel
-nnoremap <leader>t :TagbarToggle<CR>
 
 
 " **************************************************
@@ -170,3 +165,11 @@ nnoremap <silent> <C-h> :FSHere<CR>
 " vim-trailing-whitespace plugin key mapping
 " --------------------------------------------------
 nnoremap <silent> <C-s> :FixWhitespace<CR>
+" --------------------------------------------------
+" tagbar key mapping
+" --------------------------------------------------
+nnoremap <silent> <C-t> :TagbarToggle<CR>
+" --------------------------------------------------
+" NERDTree key mapping
+" --------------------------------------------------
+nnoremap <silent> <C-x> :NERDTreeToggle<CR>
