@@ -146,12 +146,6 @@ nnoremap <leader>t :TagbarToggle<CR>
 
 
 " --------------------------------------------------
-" auto-pairs plugin settings
-" --------------------------------------------------
-let g:AutoPairsShortcutToggle = '<leader>p'
-
-
-" --------------------------------------------------
 " Mapping to make vim-fswitch plugin make working
 " --------------------------------------------------
 nnoremap <leader>h :FSRight<CR>
