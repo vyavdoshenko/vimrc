@@ -163,7 +163,10 @@ nnoremap <leader>t :TagbarToggle<CR>
 " C-u      Move back (up) 1/2 screen; half page up
 " C-n      Keyword completion
 " --------------------------------------------------
-" Mapping to make vim-fswitch plugin make working
+" vim-fswitch plugin key mapping
 " --------------------------------------------------
 nnoremap <silent> <C-h> :FSHere<CR>
-
+" --------------------------------------------------
+" vim-trailing-whitespace plugin key mapping
+" --------------------------------------------------
+nnoremap <silent> <C-s> :FixWhitespace<CR>
