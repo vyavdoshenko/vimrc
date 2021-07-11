@@ -101,22 +101,8 @@ let g:lightline = {
 
 
 " --------------------------------------------------
-" Moving windows key mappings
-" --------------------------------------------------
-nnoremap <leader><RIGHT> <C-w><
-nnoremap <leader><LEFT> <C-w>>
-nnoremap <leader><UP> <C-w>-
-nnoremap <leader><DOWN> <C-w>+
-
-
-" --------------------------------------------------
 " YCM plugin settings
 " --------------------------------------------------
-nnoremap <leader>b :YcmForceCompileAndDiagnostics<CR>
-" Find in workspace key mapping
-nnoremap <leader>fw <Plug>(YCMFindSymbolInWorkspace)
-" Find in current document key mapping
-nnoremap <leader>fd <Plug>(YCMFindSymbolInDocument)
 " Populating list of issues. Useful for :lopen (:lclose)
 let g:ycm_always_populate_location_list = 1
 
@@ -183,3 +169,16 @@ nnoremap <silent> <C-x> :NERDTreeToggle<CR>
 " --------------------------------------------------
 let g:lt_location_list_toggle_map = '<silent> <C-l>'
 let g:lt_quickfix_list_toggle_map = '<silent> <C-q>'
+" --------------------------------------------------
+" YCM plugin settings
+" --------------------------------------------------
+nmap <silent> <F8> :YcmForceCompileAndDiagnostics<CR>
+nmap <silent> <F6> <Plug>(YCMFindSymbolInWorkspace)
+nmap <silent> <F7> <Plug>(YCMFindSymbolInDocument)
+" --------------------------------------------------
+" Moving windows key mappings
+" --------------------------------------------------
+nnoremap <leader><RIGHT> <C-w><
+nnoremap <leader><LEFT> <C-w>>
+nnoremap <leader><UP> <C-w>-
+nnoremap <leader><DOWN> <C-w>+
