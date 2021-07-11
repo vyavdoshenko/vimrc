@@ -63,6 +63,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
+Plug 'Valloric/ListToggle'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
@@ -118,9 +119,12 @@ nnoremap <leader>fw <Plug>(YCMFindSymbolInWorkspace)
 nnoremap <leader>fd <Plug>(YCMFindSymbolInDocument)
 " Populating list of issues. Useful for :lopen (:lclose)
 let g:ycm_always_populate_location_list = 1
-nnoremap <leader>l :lopen<CR><C-w>k
-nnoremap <leader>q :lclose<CR>
 
+
+" --------------------------------------------------
+" ListToggle plugin settings
+" --------------------------------------------------
+let g:lt_height = 10
 
 " --------------------------------------------------
 " NERDTree plugin settings
@@ -174,3 +178,8 @@ nnoremap <silent> <C-t> :TagbarToggle<CR>
 " NERDTree key mapping
 " --------------------------------------------------
 nnoremap <silent> <C-x> :NERDTreeToggle<CR>
+" --------------------------------------------------
+" ListToggle key mapping
+" --------------------------------------------------
+let g:lt_location_list_toggle_map = '<silent> <C-l>'
+let g:lt_quickfix_list_toggle_map = '<silent> <C-q>'
