@@ -145,12 +145,6 @@ let g:tagbar_position = 'botright vertical'
 nnoremap <leader>t :TagbarToggle<CR>
 
 
-" --------------------------------------------------
-" Mapping to make vim-fswitch plugin make working
-" --------------------------------------------------
-nnoremap <leader>h :FSRight<CR>
-nnoremap <leader>c :FSRight<CR>
-
 " **************************************************
 " Known default mappings with Ctrl key
 " **************************************************
@@ -168,4 +162,8 @@ nnoremap <leader>c :FSRight<CR>
 " C-d      Move forward 1/2 screen; half page down
 " C-u      Move back (up) 1/2 screen; half page up
 " C-n      Keyword completion
+" --------------------------------------------------
+" Mapping to make vim-fswitch plugin make working
+" --------------------------------------------------
+nnoremap <silent> <C-h> :FSHere<CR>
 
