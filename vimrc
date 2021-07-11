@@ -60,6 +60,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'valloric/youcompleteme'
 Plug 'sheerun/vim-polyglot'
