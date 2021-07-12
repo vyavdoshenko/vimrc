@@ -52,6 +52,15 @@ set smartcase                " Override the 'ignorecase' option if the search pa
 set incsearch                " Enable incremental search
 
 
+" The function has to be defined before `vim-buffet` is loaded.
+function! g:BuffetSetCustomColors()
+hi! BuffetCurrentBuffer cterm=NONE ctermbg=106 ctermfg=8 guibg=#b8bb26 guifg=#0
+hi! BuffetTrunc cterm=bold ctermbg=66 ctermfg=8 guibg=#458588 guifg=#0
+hi! BuffetBuffer cterm=NONE ctermbg=239 ctermfg=8 guibg=#504945 guifg=#0
+hi! BuffetTab cterm=NONE ctermbg=66 ctermfg=8 guibg=#458588 guifg=#0
+hi! BuffetActiveBuffer cterm=NONE ctermbg=10 ctermfg=239 guibg=#999999 guifg=#504945
+endfunction
+
 " --------------------------------------------------
 " Plugins
 " --------------------------------------------------
@@ -72,6 +81,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dyng/ctrlsf.vim'
 " Always load the vim-devicons as the very last one.
 Plug 'ryanoasis/vim-devicons'
+" This plugin have to be placed after devicons to make it works
+Plug 'bagrat/vim-buffet'
 call plug#end()
 
 
@@ -93,11 +104,14 @@ set noshowmode
 
 
 " --------------------------------------------------
-" lightline & vim_monokai_tasty integration
+" lightline integration
 " --------------------------------------------------
 let g:lightline = {
       \ 'colorscheme': 'monokai_tasty',
-      \ }
+      \ 'enable': {
+      \   'tabline': 0
+      \ },
+     \ }
 
 
 " --------------------------------------------------
@@ -148,6 +162,11 @@ let g:tagbar_autoshowtag = 1
 " C-d      Move forward 1/2 screen; half page down
 " C-u      Move back (up) 1/2 screen; half page up
 " C-n      Keyword completion
+" **************************************************
+" Known plugin bindings
+" YCM plugin
+" <C-i> GoTo Commands jump forward
+" <C-o> GoTo Commands jump back
 " --------------------------------------------------
 " vim-fswitch plugin key mapping
 " --------------------------------------------------
@@ -172,7 +191,7 @@ let g:lt_quickfix_list_toggle_map = '<silent> <C-q>'
 " --------------------------------------------------
 " YCM plugin settings
 " --------------------------------------------------
-nmap <silent> <F8> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <silent> <F8> :YcmForceCompileAndDiagnostics<CR>
 nmap <silent> <F6> <Plug>(YCMFindSymbolInWorkspace)
 nmap <silent> <F7> <Plug>(YCMFindSymbolInDocument)
 " --------------------------------------------------
