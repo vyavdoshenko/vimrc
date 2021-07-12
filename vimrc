@@ -170,19 +170,19 @@ let g:tagbar_autoshowtag = 1
 " --------------------------------------------------
 " vim-fswitch plugin key mapping
 " --------------------------------------------------
-nnoremap <silent> <C-h> :FSHere<CR>
+nnoremap <C-h> :FSHere<CR>
 " --------------------------------------------------
 " vim-trailing-whitespace plugin key mapping
 " --------------------------------------------------
-nnoremap <silent> <C-s> :FixWhitespace<CR>
+nnoremap <C-s> :FixWhitespace<CR>
 " --------------------------------------------------
 " tagbar key mapping
 " --------------------------------------------------
-nnoremap <silent> <C-t> :TagbarToggle<CR>
+nnoremap <C-t> :TagbarToggle<CR>
 " --------------------------------------------------
 " NERDTree key mapping
 " --------------------------------------------------
-nnoremap <silent> <C-x> :NERDTreeToggle<CR>
+nnoremap <C-x> :NERDTreeToggle<CR>
 " --------------------------------------------------
 " ListToggle key mapping
 " --------------------------------------------------
@@ -191,9 +191,9 @@ let g:lt_quickfix_list_toggle_map = '<silent> <C-q>'
 " --------------------------------------------------
 " YCM plugin settings
 " --------------------------------------------------
-nnoremap <silent> <F8> :YcmForceCompileAndDiagnostics<CR>
-nmap <silent> <F6> <Plug>(YCMFindSymbolInWorkspace)
-nmap <silent> <F7> <Plug>(YCMFindSymbolInDocument)
+nnoremap <F8> :YcmForceCompileAndDiagnostics<CR>
+nmap <F6> <Plug>(YCMFindSymbolInWorkspace)
+nmap <F7> <Plug>(YCMFindSymbolInDocument)
 " --------------------------------------------------
 " Moving windows key mappings
 " --------------------------------------------------
@@ -201,3 +201,21 @@ nnoremap <leader><RIGHT> <C-w><
 nnoremap <leader><LEFT> <C-w>>
 nnoremap <leader><UP> <C-w>-
 nnoremap <leader><DOWN> <C-w>+
+" --------------------------------------------------
+" buffet plugin key mappings
+" --------------------------------------------------
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+noremap <Leader><Tab> :Bw<CR>
+noremap <Leader><S-Tab> :Bw!<CR>
+nmap <leader>t :tabnew split<CR>
