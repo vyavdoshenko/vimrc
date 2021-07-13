@@ -64,7 +64,6 @@ endfunction
 " --------------------------------------------------
 " Plugins
 " --------------------------------------------------
-set rtp +=~/.vim
 call plug#begin('~/.vim/plugged')
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'itchyny/lightline.vim'

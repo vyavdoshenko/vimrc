@@ -6,9 +6,9 @@ Please install curl. Curl needed to install vim-plug.
 ## Install
 $ git clone https://github.com/vyavdoshenko/vimrc ~/.vim
 
-For nvim only:
-$ mkdir ~/.config/nvim/
-$ ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
+### For nvim only
+Please consider following official migration process:
+https://neovim.io/doc/user/nvim.html#nvim-from-vim
 
 ## Install vim-plug
 https://github.com/junegunn/vim-plug
