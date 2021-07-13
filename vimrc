@@ -78,11 +78,20 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dyng/ctrlsf.vim'
+Plug 'yggdroot/indentline'
 " Always load the vim-devicons as the very last one.
 Plug 'ryanoasis/vim-devicons'
 " This plugin have to be placed after devicons to make it works
 Plug 'bagrat/vim-buffet'
 call plug#end()
+
+
+" --------------------------------------------------
+" indentline settings
+" --------------------------------------------------
+let g:indentLine_char = '|'
+let g:indentLine_enabled = 1
+let g:indentLine_leadingSpaceEnabled = 1
 
 
 " --------------------------------------------------
