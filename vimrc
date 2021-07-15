@@ -182,7 +182,7 @@ nnoremap <C-h> :FSHere<CR>
 " --------------------------------------------------
 " vim-trailing-whitespace plugin key mapping
 " --------------------------------------------------
-nnoremap <C-s> :FixWhitespace<CR>
+nnoremap <C-s>s :FixWhitespace<CR>
 " --------------------------------------------------
 " tagbar key mapping
 " --------------------------------------------------
@@ -227,3 +227,14 @@ noremap <S-Tab> :bp<CR>
 noremap <Leader><Tab> :Bw<CR>
 noremap <Leader><S-Tab> :Bw!<CR>
 nmap <leader>t :tabnew split<CR>
+" --------------------------------------------------
+" CtrlSF plugin key mappings
+" --------------------------------------------------
+nmap     <C-s>f <Plug>CtrlSFPrompt
+vmap     <C-s>f <Plug>CtrlSFVwordPath
+vmap     <C-s>F <Plug>CtrlSFVwordExec
+nmap     <C-s>n <Plug>CtrlSFCwordPath
+nmap     <C-s>p <Plug>CtrlSFPwordPath
+nnoremap <C-s>o :CtrlSFOpen<CR>
+nnoremap <C-s>t :CtrlSFToggle<CR>
+inoremap <C-s>t <Esc>:CtrlSFToggle<CR>
