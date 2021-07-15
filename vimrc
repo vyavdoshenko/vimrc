@@ -2,6 +2,7 @@
 " General
 " --------------------------------------------------
 filetype plugin indent on    " Enable loading the indent file for specific file types
+filetype plugin on           " Enable loading the plugin files for specific file types
 set nocompatible             " Make vim configuration no compatible with classical vi
 set hidden                   " Enable switching buffers when changes are not saved
 syntax enable                " Enable colors for different syntaxes
@@ -79,6 +80,7 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dyng/ctrlsf.vim'
 Plug 'yggdroot/indentline'
+Plug 'preservim/nerdcommenter'
 " Always load the vim-devicons as the very last one.
 Plug 'ryanoasis/vim-devicons'
 " This plugin have to be placed after devicons to make it works
