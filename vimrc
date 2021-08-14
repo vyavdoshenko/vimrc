@@ -117,11 +117,11 @@ set noshowmode
 " lightline integration
 " --------------------------------------------------
 let g:lightline = {
-      \ 'colorscheme': 'monokai_tasty',
-      \ 'enable': {
-      \   'tabline': 0
-      \ },
-     \ }
+    \ 'colorscheme': 'monokai_tasty',
+    \ 'enable': {
+    \   'tabline': 0
+    \ },
+    \ }
 
 
 " --------------------------------------------------
@@ -240,3 +240,8 @@ nmap     <C-s>p <Plug>CtrlSFPwordPath
 nnoremap <C-s>o :CtrlSFOpen<CR>
 nnoremap <C-s>t :CtrlSFToggle<CR>
 inoremap <C-s>t <Esc>:CtrlSFToggle<CR>
+
+"get rid of [  ] around icons in NerdTree
+if exists("g:loaded_webdevicons")
+	call webdevicons#hardRefresh()
+endif
