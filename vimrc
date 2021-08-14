@@ -136,6 +136,7 @@ let g:ycm_always_populate_location_list = 1
 " --------------------------------------------------
 let g:lt_height = 10
 
+
 " --------------------------------------------------
 " NERDTree plugin settings
 " --------------------------------------------------
@@ -144,6 +145,7 @@ let NERDTreeWinSize = 25        " Set panel width
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
+let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 
 " --------------------------------------------------
